@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One to hundred</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div>
+        <a class="button is-link is-outlined is-light" href="../index.html"
+          >Home</a
+        >
+      </div>
+
+      <div class="container">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box content">
+              <h2>One to hundred</h2>
+              <div class="field has-addons">
+                <div class="control">
+                  <input class="input" id="orolt" type="text" />
+                </div>
+                <button class="button is-link" onclick="doSomething()">
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt"></code></pre>
+            </div>
+            <div>
+              <p>
+                function doSomething() <br />
+                { let num = Number(document.getElementById("orolt").value);
+                <br />
+                let i = 1; <br />
+                while (i <= num) { <br />
+                console.log(i); i++; } <br />
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function doSomething() {
+        let num = Number(document.getElementById("orolt").value);
+        let i = 1;
+        while (i <= num) {
+          console.log(i);
+          i++;
+        }
+      }
+    </script>
+  </body>
+</html>
