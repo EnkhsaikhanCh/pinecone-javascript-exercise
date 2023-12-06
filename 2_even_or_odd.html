@@ -44,8 +44,8 @@
             class="is-flex is-flex-direction-column is-justify-content-center"
             style="height: 100vh"
           >
-            <div class="box">
-              <p>Exersice #2</p>
+            <div class="box content">
+              <h2>Even or odd</h2>
               <div class="is-flex mb-4">
                 <input
                   id="orolt"
@@ -54,12 +54,13 @@
                   placeholder="Input"
                 />
                 <button
-                  class="button is-primary is-large"
+                  class="button is-link is-large"
                   onclick="doSomething();"
                 >
                   Бодох
                 </button>
               </div>
+              <strong>Үр дүн</strong>
               <pre><code id="garalt" style="font-size: 20px;"></code></pre>
             </div>
           </div>
@@ -75,9 +76,9 @@
         let result = "";
         const remainder = oroltNumber % 2;
         if (remainder == 0) {
-          result = "even";
+          result = "even - тэгш";
         } else {
-          result = "odd";
+          result = "odd - сондгой";
         }
         document.getElementById("garalt").innerText = result;
       }

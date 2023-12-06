@@ -43,25 +43,24 @@
             class="is-flex is-flex-direction-column is-justify-content-center"
             style="height: 100vh"
           >
-            <div class="box">
-              <p>Exersice #1</p>
-              <div class="is-flex mb-4">
-                <input
-                  id="orolt"
-                  class="input is-large"
-                  type="text"
-                  placeholder="Too"
-                />
-
-                <button
-                  class="button is-primary is-large"
-                  onclick="doSomething();"
-                >
+            <div class="box content">
+              <h3>Adult or not</h3>
+              <div class="field has-addons">
+                <div class="control">
+                  <input
+                    id="orolt"
+                    class="input"
+                    type="text"
+                    placeholder="Too"
+                  />
+                </div>
+                <button class="button is-link" onclick="doSomething();">
                   Бодох
                 </button>
               </div>
               <!-- Output -->
-              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+              <strong>Үр дүн</strong>
+              <pre><code id="garalt"></code></pre>
             </div>
           </div>
         </div>
@@ -69,13 +68,13 @@
     </div>
     <script>
       function doSomething() {
-        const num = Number(document.getElementById("orolt").value);
+        let num = Number(document.getElementById("orolt").value);
         let age = num;
 
         if (num % 2 == 0) {
-          (age = "Nasand hursen"), console.log("Nasand hursen");
+          (age = "Насанд хүрсэн"), console.log("Насанд хүрсэн");
         } else {
-          (age = "Nasand hureegui"), console.log("Nasand hureegu");
+          "Насанд хүрээгүй", console.log("Насанд хүрээгүй");
         }
 
         let result = age;
