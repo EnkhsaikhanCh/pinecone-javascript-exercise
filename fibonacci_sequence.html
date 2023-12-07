@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fibonacci sequence</title>
+  </head>
+  <body>
+    <a class="button is-success is-outlined is-light" href="./index.html"
+      >Home</a
+    >
+    <h2>fibonacci sequence</h2>
+    <input id="orolt" type="text" placeholder="Too" />
+    <button onclick="doSomething()">бодох</button>
+    <pre><code id="garalt"></code></pre>
+
+    <script>
+      function doSomething() {
+        let num = Number(document.getElementById("orolt").value);
+        let result = "";
+
+        let firstItem = 1;
+        let secondItem = 1;
+
+        for (let i = 0; i < num; i++) {
+          debugger;
+          if (i == 0) {
+            result = "1";
+          }
+          debugger;
+          if (i == 1) {
+            result = result + " " + "1";
+          }
+          debugger;
+          if (i > 1) {
+            debugger;
+            const thirdItem = firstItem + secondItem;
+            result = result + " " + thirdItem;
+            firstItem = secondItem;
+            secondItem = thirdItem;
+            debugger;
+          }
+        }
+        debugger;
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>

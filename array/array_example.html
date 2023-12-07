@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../index.html">Home</a>
+
+    <div class="box container content">
+      <h2>Array example</h2>
+      <section class="field has-addons">
+        <input id="orolt" class="input" type="text" />
+        <button class="button" onclick="doSomething()">Button</button>
+      </section>
+      <br />
+      <strong>Үр дүн</strong>
+      <pre><code id="garalt"></code></pre>
+    </div>
+    <script>
+      function doSomething() {
+        const names = ["bold", "saraa", "dorj"];
+        console.log(names);
+
+        let i = 0;
+        while (i < names.length) {
+          console.log(names[i]);
+          i = i + 1;
+        }
+
+        let result = names;
+
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>

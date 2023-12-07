@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Calculate grade</title>
+  </head>
+  <body>
+    <header>
+      <a class="button is-success is-outlined is-light" href="../index.html"
+        >Home</a
+      >
+    </header>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box content">
+              <h2>Calculate grade</h2>
+              <div class="field has-addons">
+                <div class="control">
+                  <input
+                    id="orolt"
+                    class="input"
+                    type="text"
+                    placeholder="Дүн"
+                  />
+                </div>
+                <button class="button is-link" onclick="doSomething()">
+                  Бодох
+                </button>
+              </div>
+              <strong>Үр дүн</strong>
+              <pre><code id="garalt"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function doSomething() {
+        let num = Number(document.getElementById("orolt").value);
+
+        let result = "";
+
+        if (num >= 0) {
+          result = "F";
+          console.log("F");
+        }
+        if (num >= 60) {
+          result = "D";
+        }
+        if (num >= 70) {
+          result = "C";
+        }
+        if (num >= 80) {
+          result = "B";
+        }
+        if (num >= 90) {
+          result = "A";
+        }
+
+        if (num > 100) {
+          result = "Enter correct grade, please";
+        }
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>
