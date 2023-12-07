@@ -41,7 +41,6 @@
         <div class="column is-half is-offset-one-quarter">
           <div
             class="is-flex is-flex-direction-column is-justify-content-center"
-            style="height: 100vh"
           >
             <div class="box content">
               <h3>Adult or not</h3>
@@ -71,10 +70,10 @@
         let num = Number(document.getElementById("orolt").value);
         let age = num;
 
-        if (num % 2 == 0) {
+        if (num >= 18) {
           (age = "Насанд хүрсэн"), console.log("Насанд хүрсэн");
         } else {
-          "Насанд хүрээгүй", console.log("Насанд хүрээгүй");
+          (age = "Насанд хүрээгүй"), console.log("Насанд хүрээгүй");
         }
 
         let result = age;
