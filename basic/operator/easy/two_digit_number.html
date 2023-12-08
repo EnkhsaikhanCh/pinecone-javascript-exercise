@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">Home</a>
+    </header>
+    <section>
+      <h2>2 Digit Number</h2>
+      <input id="orolt" type="text" placeholder="Too" />
+      <button onclick="doSomething()">Бодох</button>
+      <p>Үр дүн</p>
+      <pre><code id="garalt"></code></pre>
+    </section>
+    <script>
+      function doSomething() {
+        let num = document.getElementById("orolt").value;
+        let result;
+        ab = num;
+        secondNum = ab % 10;
+        firstNum = Math.floor(ab / 10);
+
+        ab = firstNum * secondNum;
+        result = ab;
+
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>

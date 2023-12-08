@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classify Number</title>
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">Home</a>
+    </header>
+    <section>
+      <h2>Classify Number</h2>
+      <input id="orolt" type="text" />
+      <button onclick="doSomething()">Бодох</button>
+      <p>Үр дүн</p>
+      <pre><code id="garalt"></code></pre>
+    </section>
+
+    <script>
+      function doSomething() {
+        let num = Number(document.getElementById("orolt").value);
+
+        if (num >= 10) {
+          console.log(num + " - 10 aac их тоо");
+          result = num + " - 10 aac их тоо";
+        }
+        if (num < 10) {
+          result = num + " - 10 aac бага тоо ";
+        }
+
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change array last element</title>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">Home</a>
+    </header>
+    <section>
+      <h2>Change array last element</h2>
+      <input id="orolt1" type="text" placeholder="Array" />
+      <input id="orolt2" type="text" placeholder="new-element" />
+      <button onclick="doSomething()">Бодох</button>
+      <p>Үр дүн</p>
+      <pre><code id="garalt"></code></pre>
+    </section>
+
+    <script>
+      function doSomething() {
+        let input1 = document.getElementById("orolt1").value;
+        let input2 = document.getElementById("orolt2").value;
+
+        input1 = input1.replace("[", "");
+        input1 = input1.replace("]", ",");
+
+        console.log(input1, input2);
+
+        document.getElementById("garalt").innerText = input1 + " " + input2;
+      }
+    </script>
+  </body>
+</html>

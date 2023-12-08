@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <a href="../index.html">Home</a>
+      <h2>Array member average</h2>
+      <input id="orolt" type="text" />
+      <button onclick="doSomething()">бодох</button>
+      <p>Outcome</p>
+      <pre><code id="garalt"></code></pre>
+    </section>
+
+    <script>
+      function doSomething() {
+        let input = document.getElementById("orolt").value;
+        debugger;
+        input = input.replace("[", "");
+        input = input.replace("]", "");
+        debugger;
+        const values = input.split(", ");
+        debugger;
+        let sum = 0;
+        debugger;
+        for (let i = 0; i < values.length; i++) {
+          sum = sum + Number(values[i]);
+        }
+        debugger;
+        let result = sum / values.length;
+        debugger;
+        document.getElementById("garalt").innerText = result;
+        debugger;
+      }
+    </script>
+  </body>
+</html>
