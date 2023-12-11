@@ -3,28 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <title>Classify Number</title>
   </head>
   <body>
     <header>
-      <a href="/index.html">Home</a>
+      <a class="button is-success is-outlined is-light" href="/index.html"
+        >Home</a
+      >
     </header>
     <section>
-      <h2>Classify Number</h2>
-      <input id="orolt" type="text" />
-      <button onclick="doSomething()">Бодох</button>
-      <p>Үр дүн</p>
-      <pre><code id="garalt"></code></pre>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div
+              class="is-flex is-flex-direction-column is-justify-content-center"
+              style="height: 100vh"
+            >
+              <div class="box content">
+                <h2>Classify Number</h2>
+                <div class="field has-addons">
+                  <div class="control">
+                    <input
+                      id="orolt"
+                      class="input"
+                      type="text"
+                      placeholder="2 оронтой тоо"
+                    />
+                  </div>
+                  <button class="button is-link" onclick="doSomething()">
+                    Бодох
+                  </button>
+                </div>
+
+                <!-- Output -->
+                <p>Үр дүн</p>
+                <pre><code id="garalt"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
       function doSomething() {
         let num = Number(document.getElementById("orolt").value);
 
-        if (num >= 10) {
+        if (num >= 10 && num % 2 == 0) {
           console.log(num + " - 10 aac их тоо");
-          result = num + " - 10 aac их тоо";
+          result = num + " - тэгш тоо ба 10 aac их тоо";
         }
+        if (num >= 10 && num % 2 == 1) {
+          console.log(num + " - 10 aac их тоо");
+          result = num + " - сондгой тоо ба 10 aac их тоо";
+        }
+
         if (num < 10) {
           result = num + " - 10 aac бага тоо ";
         }

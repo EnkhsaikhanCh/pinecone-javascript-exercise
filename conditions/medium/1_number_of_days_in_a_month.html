@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <title>Number of Days In A Month</title>
   </head>
   <body>
@@ -12,22 +15,49 @@
         >Home</a
       >
     </header>
-    <h2>Number of Days In A Month</h2>
-    <input id="input-year" type="text" placeholder="Year" />
-    <input id="input-month" type="text" placeholder="Month" />
-    <button onclick="doSomething()">Бодох</button>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+          >
+            <div class="box content">
+              <h3>Number of Days In A Month</h3>
+              <div class="field">
+                <div class="is-flex">
+                  <input
+                    id="input-year"
+                    class="input"
+                    type="text"
+                    placeholder="Year"
+                  />
+                  <input
+                    id="input-month"
+                    class="input"
+                    type="text"
+                    placeholder="Month"
+                  />
 
-    <pre><strong>Year: &nbsp</strong><code id="output-year"></code></pre>
-    <pre><strong>Month: &nbsp</strong><code id="output-month"></code></pre>
-    <pre><strong>Days: &nbsp</strong><code id="output-days"></code></pre>
+                  <button class="button is-link" onclick="doSomething()">
+                    Бодох
+                  </button>
+                </div>
+              </div>
+
+              <!-- Output -->
+              <pre><strong>Year: </strong><code id="output-year"></code></pre>
+              <pre><strong>Month: </strong><code id="output-month"></code></pre>
+              <pre><strong>Days: </strong><code id="output-days"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       function doSomething() {
         console.log("Hello World");
         let year = Number(document.getElementById("input-year").value);
         let month = Number(document.getElementById("input-month").value);
-
-        // console.log(year);
-        // console.log(month);
 
         let result = "";
 

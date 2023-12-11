@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>N Numbers Sum</title>
   </head>
   <body>
-    <a href="/index.html">Home</a>
+    <header>
+      <a href="/index.html">Home</a>
+    </header>
+    <div class="container">
+      <h3>N Numbers Sum</h3>
+      <input id="orolt" type="text" placeholder="Too" />
+      <button onclick="doSoemthing()">Бодох</button>
+
+      <!-- Output -->
+      <pre><code id="garalt"></code></pre>
+    </div>
+    <script>
+      function doSoemthing() {
+        let input = document.getElementById("orolt").value;
+        let outputElement = document.getElementById("garalt");
+
+        if (input.length === 2 && !isNaN(input)) {
+          let result = Number(input[0]) + Number(input[1]);
+          outputElement.innerText = result;
+        } else {
+          outputElement.innerText = "2 оронтой тоо оруулна уу";
+        }
+      }
+    </script>
   </body>
 </html>
