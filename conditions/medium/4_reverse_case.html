@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a class="button is-success is-outlined is-light" href="/index.html"
+        >home</a
+      >
+    </header>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box content">
+              <h3>Reverse Case</h3>
+              <div class="field has-addons">
+                <div class="control">
+                  <input id="input" class="input" type="text" />
+                </div>
+                <button class="button is-link" onclick="doSomething()">
+                  Бодох
+                </button>
+              </div>
+              <p><strong>Үр дүн</strong></p>
+              <pre><code id="output" ></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function doSomething() {
+        let input = document.getElementById("input").value;
+
+        if (input && input.length > 0) {
+          let reversedString = "";
+
+          for (let i = input.length - 1; i >= 0; i--) {
+            reversedString = reversedString + input[i];
+          }
+
+          result = reversedString;
+        } else {
+          result = "Please enter a non-empty string";
+        }
+
+        document.getElementById("output").innerText = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Sum of the Digits</title>
+  </head>
+  <body>
+    <header>
+      <a class="button" href="/index.html">Home</a>
+    </header>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box content">
+              <h3>Sum of the Digits</h3>
+              <div class="field has-addons">
+                <input id="orolt" class="input" type="text" />
+                <button class="button is-link" onclick="doSomething()">
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function doSomething() {
+        let input = document.getElementById("orolt").value;
+        let outputElement = document.getElementById("garalt");
+
+        if (input.length === 3 && !isNaN(input)) {
+          // 3 orontoi too gedgiig shalgah
+
+          // string-eer orj irsen utgiig too bolgoj horvuuleh
+          let digit1 = Number(input[0]);
+          let digit2 = Number(input[1]);
+          let digit3 = Number(input[2]);
+
+          // niilberiig oloh
+          let sum = digit1 + digit2 + digit3;
+
+          outputElement.innerText = "Цифрүүдийн нийлбэр: " + sum;
+        } else {
+          outputElement.innerText = "3 оронтой тоо оруулна уу";
+        }
+      }
+    </script>
+  </body>
+</html>
