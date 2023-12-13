@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-background-black-ter">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
   </head>
-  <body>
+  <body class="has-background-black-ter">
     <div class="content">
       <div>
         <a class="button is-link is-outlined is-light" href="/index.html"
@@ -18,46 +18,39 @@
       </div>
 
       <div class="container">
+        <div class="columns">
         <div class="column is-half is-offset-one-quarter">
           <div
             class="is-flex is-flex-direction-column is-justify-content-center"
             style="height: 100vh"
           >
-            <div class="box content">
-              <h2>One to hundred</h2>
-              <div class="field has-addons">
+            <div class="box has-background-dark">
+              <h2 class="has-text-white">One to hundred</h2>
+              <div class="field is-grouped">
                 <div class="control">
-                  <input class="input" id="orolt" type="text" />
+                  <input id="orolt" class="input" type="text"  placeholder="Too"/>
                 </div>
-                <button class="button is-link" onclick="doSomething()">
-                  Бодох
+                <button class="button is-info" onclick="doSomething()">
+                  <strong>Бодох</strong>
                 </button>
               </div>
               <pre><code id="garalt"></code></pre>
-            </div>
-            <div>
-              <p>
-                function doSomething() <br />
-                { let num = Number(document.getElementById("orolt").value);
-                <br />
-                let i = 1; <br />
-                while (i <= num) { <br />
-                console.log(i); i++; } <br />
-                }
-              </p>
-            </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <script>
       function doSomething() {
         let num = Number(document.getElementById("orolt").value);
-        let i = 1;
-        while (i <= num) {
-          console.log(i);
-          i++;
+        let result = "";
+
+        for (let i = 1; i <= num; i++){
+          console.log(i)
+          result = result + i + "\n";
         }
+
+        document.getElementById("garalt").innerText = result
       }
     </script>
   </body>

@@ -9,29 +9,61 @@
     />
     <title>N Numbers Sum</title>
   </head>
-  <body>
+  <body class="content has-background-black-ter">
     <header>
-      <a href="/index.html">Home</a>
+      <a class="button" href="/index.html">Home</a>
     </header>
     <div class="container">
-      <h3>N Numbers Sum</h3>
-      <input id="orolt" type="text" placeholder="Too" />
-      <button onclick="doSoemthing()">Бодох</button>
-
-      <!-- Output -->
-      <pre><code id="garalt"></code></pre>
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <h3>N Numbers Sum</h3>
+              <div class="field is-grouped">
+                <div class="control">
+                  <input
+                    id="orolt"
+                    class="input"
+                    type="text"
+                    placeholder="Too"
+                  />
+                </div>
+                <button class="button is-info" onclick="doSoemthing()">
+                  <strong>Бодох</strong>
+                </button>
+              </div>
+              <!-- Output -->
+              <pre><code id="garalt"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-      function doSoemthing() {
-        let input = document.getElementById("orolt").value;
-        let outputElement = document.getElementById("garalt");
 
-        if (input.length === 2 && !isNaN(input)) {
-          let result = Number(input[0]) + Number(input[1]);
-          outputElement.innerText = result;
-        } else {
-          outputElement.innerText = "2 оронтой тоо оруулна уу";
+    <script>
+      // function doSoemthing() {
+      //   let input = document.getElementById("orolt").value;
+      //   let outputElement = document.getElementById("garalt");
+
+      //   if (input.length === 2 && !isNaN(input)) {
+      //     let result = Number(input[0]) + Number(input[1]);
+      //     outputElement.innerText = result;
+      //   } else {
+      //     outputElement.innerText = "2 оронтой тоо оруулна уу";
+      //   }
+      // }
+
+      function doSoemthing() {
+        let num = Number(document.getElementById("orolt").value);
+        let result = "";
+
+        for (let i = 1; i <= num; i++) {
+          result = Number(result) + Number(i);
         }
+        document.getElementById("garalt").innerText = result;
       }
     </script>
   </body>
