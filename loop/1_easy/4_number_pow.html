@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="has-background-black-ter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a class="button" href="/index.html">Home</a>
+    </header>
+
+    <div class="container content">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <h3>Number Pow</h3>
+              <div class="field is-grouped">
+                <div class="control">
+                  <input id="orolt" class="input" type="" placeholder="Too" />
+                </div>
+                <button class="button is-info" onclick="doSomething()">
+                  <strong>Бодох</strong>
+                </button>
+              </div>
+              <pre><code id="garalt"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function doSomething() {
+        let num = Number(document.getElementById("orolt").value);
+        let result = "";
+
+        if (num > 1 && num < 1000) {
+          let powered = 1;
+          let counter = 0;
+          while (powered < 1000) {
+            powered = powered * num;
+            counter = counter + 1;
+          }
+          result =
+            num + "-н " + counter + " зэрэг нь 1000-c их байна: " + powered;
+        } else {
+          result = "1000-аас доош тоо оруулна уу.";
+        }
+        document.getElementById("garalt").innerText = result;
+        debugger;
+      }
+    </script>
+  </body>
+</html>
