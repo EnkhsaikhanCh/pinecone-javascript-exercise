@@ -50,7 +50,7 @@ function doSomething() {
   // * * + * *
   // * * + * *
   // * * + * *
-  result = result + "\n";
+
   for (let k = 0; k < num; k++) {
     for (let i = 0; i < num; i++) {
       if (i == 2) {
@@ -69,7 +69,6 @@ function doSomething() {
   // + + + + +
   // * * * * *
   // * * * * *
-  result = result + "\n";
   for (let k = 0; k < num; k++) {
     for (let i = 0; i < num; i++) {
       if (k == 2) {
@@ -80,6 +79,7 @@ function doSomething() {
     }
     result = result + "\n";
   }
+  result = result + "\n";
 
   // #5 ----------------------------------
   // * * + * *
@@ -87,7 +87,6 @@ function doSomething() {
   // + + + + +
   // * * + * *
   // * * + * *
-  result = result + "\n";
   for (let k = 0; k < num; k++) {
     for (let i = 0; i < num; i++) {
       if (k == 2 || i == 2) {
