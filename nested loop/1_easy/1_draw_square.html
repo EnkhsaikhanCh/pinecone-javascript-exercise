@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="has-background-black-ter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Draw Square</title>
+  </head>
+  <body>
+    <header>
+      <a class="button" href="/index.html">Home</a>
+    </header>
+    <div class="container content">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <h3>Draw Square</h3>
+              <div class="field is-grouped">
+                <div class="control">
+                  <input class="input" id="orolt" type="text" />
+                </div>
+                <button class="button is-info" onclick="doSomething()">
+                  <strong>Бодох</strong>
+                </button>
+              </div>
+              <p class="mb-1"><strong>Үр дүн</strong></p>
+              <pre><code id="garalt"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/1_draw_square.js"></script>
+  </body>
+</html>
