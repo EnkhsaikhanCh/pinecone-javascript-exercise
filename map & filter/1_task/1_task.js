@@ -7,7 +7,7 @@ const inventors = [
   { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
   { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
   { first: "Max", last: "Planck", year: 1858, passed: 1947 },
-  { first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 },
+  { first: "Katharine", last: "Blodgett", year: 1898, passed: 1979 },
   { first: "Ada", last: "Lovelace", year: 1815, passed: 1852 },
   { first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 },
   { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
@@ -44,20 +44,20 @@ console.log("fist name", first);
 console.log("last name", last);
 
 // Array.sort()
-// 3. Sort the inventors by birthdate, oldest to youngest
-function birthdateSort(a, b) {
+// 3. Sort the inventors by birthday, oldest to youngest
+function birthdaySort(a, b) {
   return a.year - b.year;
 }
-const sort = inventors.sort(birthdateSort);
-console.log("sort by birthdate:", sort);
+const sort = inventors.slice().sort(birthdaySort);
+console.log("sort by birthday:", sort);
 
 // 4. Sort the inventors by years lived
 function lifeTime(a, b) {
-  let a_age = a.passed - a.year;
-  let b_age = b.passed - b.year;
+  let aAge = a.passed - a.year;
+  let bAge = b.passed - b.year;
 
-  return a_age - b_age;
+  return aAge - bAge;
 }
 
-const lifeTimeSort = inventors.sort(lifeTime);
+const lifeTimeSort = inventors.slice().sort(lifeTime);
 console.log(lifeTimeSort);
